@@ -44,7 +44,7 @@ resource "aws_key_pair" "auth" {
 }
 
 resource "aws_vpc" "vpc-1" {
-  cidr_block           = "10.0.0.1/24"
+  cidr_block           = "10.0.0.0/24"
   enable_dns_hostnames = true
 
   tags {
@@ -54,7 +54,7 @@ resource "aws_vpc" "vpc-1" {
 
 resource "aws_subnet" "subnet" {
   vpc_id = "${aws_vpc.vpc-1.id}"
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "10.0.1.0/26"
   availability_zone = "${var.availability_zone}"
   tags {
     Name = "Main"

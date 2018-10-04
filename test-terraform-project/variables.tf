@@ -6,7 +6,7 @@
 
 variable "vm-1_ami" {
   type = "string"
-  description = "Generated"
+  description = "AMI for VM 1"
   default = "ami-759bc50a"
 }
 
